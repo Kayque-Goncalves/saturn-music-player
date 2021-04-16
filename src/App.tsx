@@ -1,9 +1,14 @@
+/* eslint-disable no-use-before-define */
 import React from 'react'
+import GlobalStyles from './styles/GlobalStyles'
 
-function App() {
+import Login from './components/Login/login'
+
+const App: React.FC = () => {
   return (
     <>
-      <h1> Saturn </h1>
+      <GlobalStyles />
+      <Login />
     </>
   )
 }
