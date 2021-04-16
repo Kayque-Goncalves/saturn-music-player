@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@styled-icons/feather": "^10.18.0",
+    "@styled-icons/ionicons-outline": "^10.28.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -20,6 +22,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "styled-components": "^5.2.3",
     "typescript": "^4.2.4",
     "web-vitals": "^1.0.1"
   },
@@ -48,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.9",
     "eslint": "7.12.1"
   }
 }
