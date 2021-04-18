@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Planet } from '@styled-icons/ionicons-outline/Planet'
+import { ArrowRight } from '@styled-icons/feather'
 
 export const Container = styled.div`
   width: 100vw;
@@ -11,14 +12,22 @@ export const Container = styled.div`
 export const WrapperMask = styled.div`
   display: flex;
   flex-direction: row;
+
   width: 100vw;
-  height: 100%;
+  height: 100vh;
 
   position: absolute;
   top: 0;
 
   background: rgba(196, 196, 196, 0.03); 
   backdrop-filter: blur(50px);
+
+  @media (max-width: 1002px) {
+    flex-direction: column;
+
+    width: 100%;
+    height: 1024px;
+  }
 `
 
 export const Background = styled.div`
@@ -27,15 +36,27 @@ export const Background = styled.div`
     width: 100%;
     height: 95vh;
   }
+
+  @media (max-width: 1002px) {
+    > img {
+      width: 100vw;
+      height: 1024px;
+      
+      transform: rotate(180deg);
+    }
+  } 
 `
 
 export const LeftSide = styled.div`
-  width: 50%;
+  width: 60%;
   height: 95vh;
 
   left: 0;
   display: flex;
   flex-direction: column;
+
+  justify-content: center;
+  /* align-items: center; */
 
   > .brand {
     display: flex;
@@ -54,6 +75,16 @@ export const LeftSide = styled.div`
     font-size: 1rem;
     font-weight: 300;
     color: #fff;
+
+    @media (max-width: 425px) {
+      margin: 10px 0 0 10px;
+    }
+  }
+
+  @media (max-width: 1002px) {
+    width: 100%;
+
+    justify-content: center;
   }
 `
 
@@ -91,11 +122,51 @@ export const Messages = styled.div`
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     color: #f6f6f6;
-  } 
+  }
+
+  @media (max-width: 1029px) {
+    > h2 {
+      font-size: 4rem;
+    }
+
+    > h2:first-child, h2:last-child {
+      font-size: 4rem;
+    }
+  }
+
+  @media (max-width: 515px) {
+    > h2 {
+      font-size: 3rem;
+    }
+
+    > h2:first-child, h2:last-child {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 413px) {
+    > h2 {
+      font-size: 2rem;
+    }
+
+    > h2:first-child, h2:last-child {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 310px) {
+    > h2 {
+      font-size: 1.5rem;
+    }
+
+    > h2:first-child, h2:last-child {
+      font-size: 1.5rem;
+    }
+  }
 `
 
 export const RightSide = styled.div`
-  width: 50%;
+  width: 40%;
   height: 95vh;
 
   right: 0;
@@ -105,13 +176,12 @@ export const RightSide = styled.div`
   flex-direction: column;
 
   justify-content: center;
-  align-items: center;
 
-  > div:first-child {
-    margin-top: 5px;
+  > .inputWrapper:first-child {
+    margin-top: 100px;
   }
 
-  > div {
+  > .inputWrapper {
     display: flex;
     flex-direction: column;
 
@@ -119,16 +189,27 @@ export const RightSide = styled.div`
     height: 100px;
 
     margin-top: 10px;
-    padding: 20px;
+    padding: 5px;
   }
 
-  > div > span {
-    margin: 25px 0;
+  > .inputWrapper > span {
+    top: 0;
 
     color: #fff;
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 0.75rem;
+  }
+
+  @media (max-width: 1002px) {
+    width: 70%;
+
+    justify-content: center;
+    margin-left: 85px;
+
+    > .inputWrapper:first-child {
+      margin-top: 0px;
+    }
   }
 `
 
@@ -152,9 +233,26 @@ export const Input = styled.input`
 `
 
 export const ContinueButton = styled.button`
+    width: 50px;
+    height: 50px;
 
+    margin-top: 10px;
+    margin-left: 5px;
+
+    border-radius: 50%;
+    border: 1px solid #fff;
+
+    &:hover {
+      cursor: pointer;
+    }
 `
 
-export const ArrowRight = styled.div`
+export const ContinueIcon = styled(ArrowRight)`
+  padding: 0;
+  width: 30px;
+  height: 30px;
 
+  > polyline, line {
+    color: white;
+  }
 `
