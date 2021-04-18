@@ -9,6 +9,7 @@ export default createGlobalStyle`
     html, body, #root {
         max-height: 100vh;
         max-width: 100vw;
+
         height: 100%;
         width: 100%;
     }
@@ -17,7 +18,7 @@ export default createGlobalStyle`
         background: none;
     }
     html { 
-
+        background: #000;
     }
     :root {
 
