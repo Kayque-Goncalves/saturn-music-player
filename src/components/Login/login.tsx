@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 
-import { Container, Background, LeftSide, Logo, Messages, RightSide, Input, ContinueButton, ArrowRight, WrapperMask } from './styles'
+import { Container, Background, LeftSide, Logo, Messages, RightSide, Input, ContinueButton, ContinueIcon, WrapperMask } from './styles'
 import background from '../../images/background.jpg'
 
 const Login: React.FC = () => {
@@ -26,23 +26,25 @@ const Login: React.FC = () => {
             <h2> ever. </h2>
           </Messages>
 
-          <span> Sign up </span>
+          {/* <span> Sign up </span> */}
         </LeftSide>
 
         <RightSide>
-          <div>
-            <span> U S E R N A M E </span>
-            <Input type="text" placeholder="Enter username" />
-          </div>
+            <div className="inputWrapper">
+              <span> E M A I L </span>
+              <Input type="text" placeholder="Enter email" />
+            </div>
 
-          <div>
-            <span> P A S S W O R D </span>
-            <Input type="password" placeholder="Enter password" />
-          </div>
+            <div className="inputWrapper">
+              <span> P A S S W O R D </span>
+              <Input type="password" placeholder="Enter password" />
+            </div>
 
-          <ContinueButton>
-              <ArrowRight />
-          </ContinueButton>
+            <div className="buttonWrapper">
+              <ContinueButton>
+                  <ContinueIcon />
+              </ContinueButton>
+            </div>
 
         </RightSide>
 
