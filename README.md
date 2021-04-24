@@ -2,7 +2,7 @@
   Saturn Music Player
 </h1>
 
-That is project made to train my Front-end skills.
+This is project made to train my Front-end skills.
 
 🚧 **Saturn Player is under development** 🚧
 
